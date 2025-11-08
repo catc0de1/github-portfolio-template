@@ -5,6 +5,7 @@ export function createProjectCard(project) {
   card.className = "project-card";
 
   const imageSrc = project.thumbnailImage ? `./images/${project.thumbnailImage}` : "./images/default.webp";
+  const imageAlt = typeof project.thumbnailImageAlt === "string" ? project.thumbnailImageAlt : project.name;
 
   const techStacks = Array.isArray(project["techStack"])
     ? project["techStack"]
@@ -15,7 +16,7 @@ export function createProjectCard(project) {
 
   card.innerHTML = `
     <div class="project-image-container">
-      <img src="${imageSrc}" alt="${project.name}" class="project-image" />
+      <img src="${imageSrc}" alt="${imageAlt}" class="project-image" />
     </div>
     <div class="project-content">
       <h3>${project.name}</h3>
@@ -44,17 +45,18 @@ function showProjectModal(project) {
   if (Array.isArray(project.modalImages) && project.modalImages.length > 0) {
     sliderTrack.innerHTML = project.modalImages
       .map((img) => {
-        const src = img.modalImageIsLocal
-          ? `./images/${img.modalImage}`
-          : img.modalImage;
-        return `<img src="${src || "./images/default.webp"}" alt="${project.name} preview" />`;
+        const src = `./images/${img.fileName}`;
+        const alt = img.alt ? img.alt : project.name;
+        return `<img src="${src || "./images/default.webp"}" alt="${alt} preview" />`;
       })
       .join("");
   } else {
     const fallback = project.thumbnailImage
       ? `./images/${project.thumbnailImage}`
       : "./images/default.webp";
-    sliderTrack.innerHTML = `<img src="${fallback}" alt="${project.name}" />`;
+    const alt = project.thumbnailImageAlt ? project.thumbnailImageAlt : project.name;
+    
+    sliderTrack.innerHTML = `<img src="${fallback}" alt="${alt}" />`;
   }
 
   modalTitle.textContent = project.name;
@@ -68,8 +70,8 @@ function showProjectModal(project) {
     <strong>Tech Stack:</strong>
     <div class="modal-tech-group">${techStacks}</div>
     ${
-      project.url
-        ? `<p><a href="${project.url}" target="_blank" rel="noopener noreferrer">Visit Project</a></p>`
+      project.projectUrl
+        ? `<p><a href="${project.projectUrl}" target="_blank" rel="noopener noreferrer">Visit Project</a></p>`
         : ""
     }
     `;

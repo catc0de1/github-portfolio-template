@@ -1,8 +1,25 @@
 {
   "githubUsername": "catc0de1",
-  "githubProfileUrl": "https://github.com/catc0de1",
-  "siteTitle": "My GitHub Portfolio",
+  "githubUrl": "https://github.com/catc0de1",
+  "webTitle": "GitHub Portfolio - catc0de1",
+  "title": "My GitHub Portfolio",
   "subtitle": "A showcase of my repositories and creations",
-  "themeColor": "#0000ff",
-  "projectSource": "./data/projects.json"
+  "themeColor": "#0000FF",
+  "useLocalJson": true,
+  "email": "youremail@example.com",
+  "socialMedia": [
+    {
+      "name": "instagram",
+      "url": ""
+    },
+    {
+      "name": "twitter",
+      "url": ""
+    },
+    {
+      "name": "likendin",
+      "url": ""
+    }
+  ],
+  "wa": ""
 }

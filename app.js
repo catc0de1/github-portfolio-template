@@ -15,34 +15,43 @@ async function loadConfig() {
 
 async function loadProjects(config) {
   const container = document.getElementById("projects");
-  try {
-    const res = await fetch(config.projectSource);
-    if (!res.ok) throw new Error("Failed to load project data");
-    const projects = await res.json();
-
-    projects.forEach((project) => {
-      const card = createProjectCard(project);
-      container.appendChild(card);
-    });
-  } catch (err) {
-    container.innerHTML = `<p style="color:red;">Error loading projects: ${err.message}</p>`;
+  if (config.useLocalJson && config.useLocalJson === true) {
+    try {
+      const res = await fetch("./data/projects.json");
+      if (!res.ok) throw new Error("Failed to load project data");
+      const projects = await res.json();
+      
+      projects.forEach((project) => {
+        const card = createProjectCard(project);
+        container.appendChild(card);
+      });
+    } catch (err) {
+      container.innerHTML = `<p style="color:red;">Error loading local projects: ${err.message}</p>`;
+    }
   }
 }
 
 function applyConfigToUI(config) {
-  document.title = config.siteTitle;
-  document.querySelector("h1").textContent = config.siteTitle;
+  if (config.webTitle && typeof config.webTitle === "string") {
+    document.title = config.webTitle;
+  } else {
+    document.title = "GitHub Portfolio";
+  }
+
+  document.querySelector("h1").textContent = config.title;
+
   document.querySelector(".subtitle").textContent = config.subtitle;
-  document.querySelector("footer a").href = config.githubProfileUrl;
 
-  document.documentElement.style.setProperty("--theme-color", config.themeColor);
-  document.querySelectorAll("a, h3").forEach((el) => {
-    el.style.color = config.themeColor;
-  });
+  document.querySelector("footer a").href = config.githubUrl;
 
-  // Mode gelap opsional
-  if (config.darkMode) {
-    document.body.classList.add("dark");
+  const color = config.themeColor;
+  if (color && typeof color === "string" && CSS.supports("color", color)) {    
+    document.documentElement.style.setProperty("--theme-color", color);
+    document.querySelectorAll("a, h3").forEach((el) => {
+      el.style.color = color;
+    });
+  } else {
+    document.documentElement.style.setProperty("--theme-color", "#0000FF");
   }
 }
 
