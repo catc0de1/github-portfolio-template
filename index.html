@@ -22,20 +22,36 @@
     <!-- modal -->
     <div id="project-modal" class="modal">
       <div class="modal-content">
-        <span id="modal-close">&times;</span>
+        <div class="modal-scroll">
+          <div class="modal-header">
+            <span id="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+          </div>
+  
+          <div class="modal-body">
+            <p id="modal-description"></p>
+            <div id="modal-tech-stack"></div>
 
-        <div class="modal-slider">
-          <div class="slider-track" id="modal-slider-track"></div>
-
-          <div class="slider-indicators" id="modal-indicators"></div>
-
-          <button class="slider-btn prev" id="modal-prev">&#10094;</button>
-          <button class="slider-btn next" id="modal-next">&#10095;</button>
+            <div class="modal-slider-container">
+              <button class="slider-btn" id="modal-prev">&#10094;</button>
+  
+              <div class="modal-slider">
+                <div class="slider-track" id="modal-slider-track"></div>
+              </div>
+              
+              <button class="slider-btn" id="modal-next">&#10095;</button>
+            </div>
+            <div class="slider-indicators" id="modal-indicators"></div>
+  
+          </div>
+          
+          <div class="modal-footer"></div>
         </div>
 
-        <h2 id="modal-title"></h2>
-        <p id="modal-description"></p>
-        <div id="modal-meta"></div>
+        <div class="modal-scroll-indicator">
+          <div class="modal-scroll-progress"></div>
+        </div>
+
       </div>
     </div>
 
