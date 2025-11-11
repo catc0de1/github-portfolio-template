@@ -22,7 +22,7 @@ This website is recommended to be deployed on **GitHub Pages**.
 
 ---
 
-## Feature
+## Features
 
 1. **No coding required, just write in JSON**
 
@@ -67,7 +67,7 @@ This website is recommended to be deployed on **GitHub Pages**.
 
 ---
 
-## How to Install
+## Installation
 
 1. **GitHub**
    
@@ -101,7 +101,7 @@ This website is recommended to be deployed on **GitHub Pages**.
    You can add your portfolio data in two ways:
 
    - By editing the local `./data/projects.json` file, or
-   - By providing an API endpoint that returns JSON from your GitHub repository’s root directory `./portfolio/index.json`.
+   - By providing an API endpoint that returns JSON from your GitHub repository’s root directory `./portfolio/index.json` (*coming soon*).
   
    Both formats share the same JSON structure and you can use either or both methods.
 
@@ -165,8 +165,10 @@ This website is recommended to be deployed on **GitHub Pages**.
    |name|Project/repository name|Required|String|
    |description|Short description|Required|String|
    |fullDescription|Full description (shown in modal)|Optional, (default: `description`)|String|
-   |projectUrl|Project/repository URL|Required||String, (URL)|
+   |projectUrl|Project/repository URL|Required|String, (URL)|
    |productUrl|Product/demo URL|Optional|String, (URL)|
+   |field|Project/product field or platform|Required|String|
+   |status|Project work status|Required|"COMPLETED" or "ON PROGRESS"|
    |techStack|List of technologies used|Required|Array of Objects|
    |techStack.name|Technology name, can see all list in **Tech Stack List**|Required|String|
    |thumbnailImage|Thumbnail image path|Optional|String|
@@ -184,6 +186,8 @@ This website is recommended to be deployed on **GitHub Pages**.
          "fullDescription": "This website show all my works as Informatic Engineering and it build perfectly that reference how skilled I am",
          "projectUrl": "https://github.com/catc0de1/portfolio",
          "productUrl": "https://iyan-zuli-armanda.netlify.app",
+         "field": "Website",
+         "status": "COMPLETED",
          "techStack": [
             { "name": "react" },
             { "name": "tailwind" },
@@ -212,6 +216,8 @@ This website is recommended to be deployed on **GitHub Pages**.
          "description": "Directory Listing App, show all best point in Surabaya",
          "projectUrl": "https://github.com/catc0de1/SurabayaBestPoint",
          "productUrl": "https://iyan-zuli-armanda.netlify.app",
+         "field": "Website",
+         "status": "ON PROGRESS",
          "techStack": [
             { "name": "express" },
             { "name": "mongodb" },
@@ -251,6 +257,7 @@ This website is recommended to be deployed on **GitHub Pages**.
    |Debian|debian|
    |Docker|docker|
    |EJS|ejs|
+   |Electron|electron|
    |Express|express|
    |Flutter|flutter|
    |Framer|framer|
@@ -332,6 +339,8 @@ Feel free to connect:
 This template is [MIT LICENSED](https://github.com/CatC0de1/github-portfolio-api-template?tab=MIT-1-ov-file)
 
 ---
+
+</br>
 
 Please leave a star and it free to contribute.
 Hope you enjoy it ^-^
