@@ -1,4 +1,5 @@
 import { projectCard } from "./components/projectCard.js";
+import { githubProfile } from "./components/githubProfile.js";
 
 async function loadConfig() {
   try {
@@ -58,6 +59,8 @@ function applyConfigToUI(config) {
 document.addEventListener("DOMContentLoaded", async () => {
   const config = await loadConfig();
   if (!config) return;
+
   applyConfigToUI(config);
   loadProjects(config);
+  githubProfile(config.githubUsername, config.githubUrl)
 });
