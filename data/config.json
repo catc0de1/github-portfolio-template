@@ -1,0 +1,24 @@
+{
+  "githubUsername": "catc0de1",
+  "githubUrl": "https://github.com/catc0de1",
+  "webTitle": "GitHub Portfolio - catc0de1",
+  "title": "Hi, I'm catc0de1",
+  "subtitle": "I'm an Informatic Engineer As Fullstack Software Developer",
+  "themeColor": "#0000FF",
+  "useLocalJson": true,
+  "email": "youremail@example.com",
+  "socialMedia": [
+    {
+      "name": "instagram",
+      "url": "your_ig"
+    },
+    {
+      "name": "twitter",
+      "url": "your_x"
+    },
+    {
+      "name": "likendin",
+      "url": "your_in"
+    }
+  ]
+}
