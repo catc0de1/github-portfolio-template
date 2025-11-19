@@ -9,16 +9,16 @@
   "email": "youremail@example.com",
   "socialMedia": [
     {
-      "name": "instagram",
+      "name": "ig",
       "url": "your_ig"
     },
     {
-      "name": "twitter",
-      "url": "your_x"
+      "name": "linkedin",
+      "url": "your_in"
     },
     {
-      "name": "likendin",
-      "url": "your_in"
+      "name": "dc",
+      "url": "your_dc"
     }
   ]
 }

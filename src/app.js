@@ -1,5 +1,6 @@
 import { projectCard } from "./components/projectCard.js";
 import { githubProfile } from "./components/githubProfile.js";
+import { renderSocialMedia } from "./components/socialMedia.js";
 
 async function loadConfig() {
   try {
@@ -63,4 +64,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   applyConfigToUI(config);
   loadProjects(config);
   githubProfile(config.githubUsername, config.githubUrl)
+  renderSocialMedia(config.socialMedia);
 });
