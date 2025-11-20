@@ -1,5 +1,6 @@
-import { projectCard } from "./components/projectCard.js";
 import { githubProfile } from "./components/githubProfile.js";
+import { projectCard } from "./components/projectCard.js";
+import { subRepoCard } from "./components/subRepoCard.js";
 import { renderSocialMedia } from "./components/socialMedia.js";
 
 async function loadConfig() {
@@ -33,6 +34,24 @@ async function loadProjects(config) {
   }
 }
 
+async function loadSubRepos() {
+  const container = document.getElementById("sub-repos");
+
+  try {
+    const res = await fetch("./data/repos.json");
+    if (!res.ok) return; // optional
+
+    const subRepos = await res.json();
+
+    subRepos.forEach((item) => {
+      const card = subRepoCard(item);
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error("Error loading sub repos:", err);
+  }
+}
+
 function applyConfigToUI(config) {
   if (config.webTitle && typeof config.webTitle === "string") {
     document.title = config.webTitle;
@@ -62,7 +81,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!config) return;
 
   applyConfigToUI(config);
-  loadProjects(config);
   githubProfile(config.githubUsername, config.githubUrl)
+  loadProjects(config);
+  loadSubRepos();
   renderSocialMedia(config.socialMedia);
 });
