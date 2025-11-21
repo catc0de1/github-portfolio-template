@@ -52,7 +52,7 @@
 }
 
 .project-content h3 {
-  color: var(--theme-color, #0000ff);
+  color: var(--light-theme-color, #0000ff);
   font-size: 1.25rem;
   margin-bottom: 0.4rem;
 }

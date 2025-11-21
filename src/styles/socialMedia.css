@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--theme-color, #0000FF);
+  background-color: var(--light-theme-color, #0000FF);
   color: white;
 
   transition: transform 0.25s ease;

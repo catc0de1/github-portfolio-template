@@ -74,7 +74,7 @@
 
 #modal-project-status {
   background-color: #eee;
-  color: var(--theme-color, #0000FF);
+  color: var(--light-theme-color, #0000FF);
   padding: 4px 16px;
   /* border: 2px solid blue; */
   border-radius: 50px;
@@ -206,7 +206,7 @@ body.modal-open {
 .modal-scroll-progress {
   width: 0%;
   height: 100%;
-  background-color: var(--theme-color, #0000ff);
+  background-color: var(--light-theme-color, #0000ff);
   transition: width 0.5s ease-out;
 }
 
@@ -257,7 +257,7 @@ body.modal-open {
   bottom: 0;
   left: 0;
   height: 4px;
-  background-color: var(--theme-color, #0000ff);
+  background-color: var(--light-theme-color, #0000ff);
   width: 0%;
   transition: width 5s linear;
   /* border-radius: 0 0 8px 8px; */
@@ -298,7 +298,7 @@ body.modal-open {
 }
 
 .indicator-dot.active {
-  background-color: var(--theme-color, #0000ff);
+  background-color: var(--light-theme-color, #0000ff);
   transform: scale(1.2);
 }
 

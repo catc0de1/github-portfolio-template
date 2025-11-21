@@ -33,7 +33,7 @@
 .sub-repo-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border-left-color: var(--theme-color);
+  border-left-color: var(--light-theme-color);
 }
 
 .sub-repo-card h3 {
@@ -48,7 +48,7 @@
 }
 
 .sub-repo-card a {
-  color: var(--theme-color, #0000FF);
+  color: var(--light-theme-color, #0000FF);
   font-weight: 600;
   align-self: flex-end;
 
