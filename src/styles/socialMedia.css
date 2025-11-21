@@ -1,0 +1,53 @@
+/* Social Media Sidebar */
+.social-media-fixed {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 5;
+  padding: 20px 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.social-media-wrapper {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.25s ease;
+}
+
+.social-media-item {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 12px;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--theme-color, #0000FF);
+  color: white;
+
+  transition: transform 0.25s ease;
+}
+
+.social-media-wrapper:hover .social-media-item {
+  transform: translateX(12px);
+}
+
+.social-media-item svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
