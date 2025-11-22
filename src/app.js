@@ -41,7 +41,7 @@ async function loadSubRepos() {
 
   try {
     const res = await fetch("./data/repos.json");
-    if (!res.ok) return; // optional
+    if (!res.ok) return;
 
     const subRepos = await res.json();
 
@@ -66,16 +66,6 @@ function applyConfigToUI(config) {
   document.querySelector(".subtitle").textContent = config.subtitle;
 
   document.querySelector("footer a").href = config.githubUrl;
-
-  const color = config.lightThemeColor;
-  if (color && typeof color === "string" && CSS.supports("color", color)) {    
-    document.documentElement.style.setProperty("--light-theme-color", color);
-    document.querySelectorAll("a, h3").forEach((el) => {
-      el.style.color = color;
-    });
-  } else {
-    document.documentElement.style.setProperty("--light-theme-color", "#0000FF");
-  }
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -88,5 +78,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderSocialMedia(config.socialMedia);
   loadSubRepos();
   initBackToTop();
-  initThemeSwitch();
+  initThemeSwitch(config.lightThemeColor, config.darkThemeColor);
 });

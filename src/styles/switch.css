@@ -8,17 +8,17 @@
   gap: 0.5rem;
   font-size: 0.9rem;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.9); /* Bisa diganti untuk dark mode nanti */
+  background-color: var(--secondary-bg-color);
   padding: 5px 10px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Label style */
 .theme-label {
   user-select: none;
   font-weight: 500;
-  color: var(--text-color, #000);
+  color: var(--secondary-text-color);
 }
 
 /* Switch container */
@@ -64,7 +64,7 @@
 
 /* Checked */
 .theme-switch input:checked + .slider {
-  background-color: var(--light-theme-color, #0000FF);
+  background-color: var(--theme-color);
 }
 
 .theme-switch input:checked + .slider::before {
