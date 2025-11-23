@@ -78,21 +78,17 @@
   justify-content: center;
   width: 25px;
   height: 25px;
-  padding: 0.3rem;
-  border-radius: 50%;
   margin: 0.25rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-tech-item:hover {
   transform: scale(1.5);
-  box-shadow: var(--shadow-md);
 }
 
 .project-tech-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
+  width: 30px;
+  height: 30px;
   display: block;
 }
 

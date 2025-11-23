@@ -291,27 +291,16 @@ body.modal-open {
   border-radius: 8px;
   margin: 0.25rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-
-.modal-tech-name {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0.25rem;
+  border: 1.5px solid var(--hover-color);
+  box-shadow: 0 0 5px var(--hover-color);
   font-weight: bold;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--main-text-color);
+  text-decoration: none;
 }
 
 .modal-tech-item:hover {
-  box-shadow: 0 0 10px var(--hover-color);
-}
-
-.modal-tech-icon svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  display: block;
+  box-shadow: 0 0 15px var(--hover-color);
+  text-decoration: none;
 }
 
 /* Close button */
