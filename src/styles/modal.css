@@ -118,9 +118,6 @@
   gap: 1rem;
   background-color: white;
   border: 2px solid #181717;
-}
-
-.modal-link-project span {
   color: #181717;
 }
 
@@ -130,35 +127,20 @@
   fill: #181717;
 }
 
-.modal-link-project:hover {
-  background-color: #181717;
-  text-decoration: none; 
-}
-
-.modal-link-project:hover span {
-  color: white;
-}
-
-.modal-link-project:hover svg {
-  fill: white;
-}
-
 .modal-link-project:active {
-  background-color: #484747;
-  border: 2px solid #484747;
-  text-decoration: none; 
+  background-color:  var(--github-modal-link-active);
 }
 
 .modal-link-product {
   gap: 1rem;
   color: white;
   background-color: #181717;
+  border: 2px solid white;
   text-decoration: none; 
 }
 
 .modal-link-product:active {
-  background-color: #484747;
-  text-decoration: none; 
+  background-color: rgba(0, 0, 0, 0.70);
 }
 
 body.modal-open {
