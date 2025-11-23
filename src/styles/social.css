@@ -36,9 +36,6 @@
   align-items: center;
   justify-content: center;
 
-  background-color: var(--theme-color);
-  color: white;
-
   transition: transform 0.25s ease;
 }
 
@@ -49,5 +46,4 @@
 .social-media-item svg {
   width: 24px;
   height: 24px;
-  fill: white;
 }

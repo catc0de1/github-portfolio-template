@@ -20,6 +20,18 @@
     {
       "name": "dc",
       "url": "your_dc"
+    },
+    {
+      "name": "fb",
+      "url": "your_fb"
+    },
+    {
+      "name": "x",
+      "url": "your_x"
+    },
+    {
+      "name": "wa",
+      "url": "your_wa"
     }
   ]
 }
