@@ -1,0 +1,12 @@
+[
+  {
+    "repoName": "My Other Repo",
+    "repoDesc": "This is my other repo. The content is specialized field",
+    "repoUrl": "https://github.com/yourname/my-other-repo"
+  },
+  {
+    "repoName": "Organization Repo Example",
+    "repoDesc": "This repo is from an organization.",
+    "repoUrl": "https://github.com/yourorg/repo-example"
+  }
+]

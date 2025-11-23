@@ -1,0 +1,37 @@
+{
+  "githubUsername": "catc0de1",
+  "githubUrl": "https://github.com/catc0de1",
+  "webTitle": "GitHub Portfolio - catc0de1",
+  "title": "Hi, I'm catc0de1",
+  "subtitle": "I'm an Informatic Engineer As Fullstack Software Developer",
+  "lightThemeColor": "#0000FF",
+  "darkThemeColor": "#BB86FC",
+  "useLocalJson": true,
+  "email": "youremail@example.com",
+  "socialMedia": [
+    {
+      "name": "ig",
+      "url": "your_ig"
+    },
+    {
+      "name": "linkedin",
+      "url": "your_in"
+    },
+    {
+      "name": "dc",
+      "url": "your_dc"
+    },
+    {
+      "name": "fb",
+      "url": "your_fb"
+    },
+    {
+      "name": "x",
+      "url": "your_x"
+    },
+    {
+      "name": "wa",
+      "url": "your_wa"
+    }
+  ]
+}

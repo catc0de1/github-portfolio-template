@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Portfolio Website",
+    "description": "My personal portfolio as Informatic Engineering",
+    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
+    "projectUrl": "https://github.com/catc0de1/example",
+    "productUrl": "https://example.com",
+    "field": "Website",
+    "status": "COMPLETED",
+    "techStack": [
+      { "name": "react" },
+      { "name": "tailwind" },
+      { "name": "vite" },
+      { "name": "ts" }
+    ],
+    "thumbnailImage": "portfolite1.webp",
+    "thumbnailImageAlt": "Start page of my portfolio website",
+    "modalImages": [
+      {
+        "fileName": "portfolite1.webp",
+        "alt": "Portfolio web preview of hero section"
+      },
+      { 
+        "fileName": "portfolite2.webp",
+        "alt": "Portfolio web preview of review section"
+      }
+    ]
+  },
+  {
+    "name": "Discord",
+    "description": "Directory Listing App, show all best point in Surabaya",
+    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
+    "projectUrl": "https://github.com/catc0de1/example",
+    "productUrl": "https://example.com",
+    "field": "Cross Platform App",
+    "status": "COMPLETED",
+    "techStack": [
+      { "name": "electron" },
+      { "name": "react" },
+      { "name": "mongodb" },
+      { "name": "redis" },
+      { "name": "rust" },
+      { "name": "cpp" },
+      { "name": "py" },
+      { "name": "ts" }
+    ],
+    "thumbnailImage": "discord.jpeg",
+    "thumbnailImageAlt": "Official Discord App Logo",
+    "modalImages": [
+      {
+        "fileName": "discord1.jpeg"
+      },
+      { 
+        "fileName": "discord2.jpeg"
+      },
+      { 
+        "fileName": "discord3.jpeg"
+      }
+    ]
+  },
+  {
+    "name": "Email API Server",
+    "description": "Prortype of SMTP Email API Server",
+    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
+    "projectUrl": "https://github.com/catc0de1/example",
+    "productUrl": "https://example.com",
+    "field": "Website",
+    "status": "COMPLETED",
+    "techStack": [
+      { "name": "express" },
+      { "name": "hbs" },
+      { "name": "ts" }
+    ]
+  },
+  {
+    "name": "GitHub Portfolio Template",
+    "description": "Open Source GitHub portfolio template, ready to use and no need coding",
+    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
+    "projectUrl": "https://github.com/catc0de1/github-portfolio-api-template",
+    "productUrl": "https://example.com",
+    "field": "Open Source Template",
+    "status": "ON PROGRESS",
+    "techStack": [
+      { "name": "html" },
+      { "name": "css" },
+      { "name": "js" },
+      { "name": "github" }
+    ],
+    "thumbnailImage": "gp7.png"
+  }
+]
