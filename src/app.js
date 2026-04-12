@@ -73,10 +73,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!config) return;
 
   applyConfigToUI(config);
-  githubProfile(config.githubUsername, config.githubUrl)
-  loadProjects(config);
-  renderSocialMedia(config.socialMedia);
-  loadSubRepos();
-  initBackToTop();
-  initThemeSwitch(config.lightThemeColor, config.darkThemeColor);
+    renderSocialMedia(config.socialMedia);
+
+  try {
+    await Promise.all([
+      githubProfile(config.githubUsername, config.githubUrl),
+      loadProjects(config),
+      loadSubRepos(),
+    ]);
+    
+    initBackToTop();
+    initThemeSwitch(config.lightThemeColor, config.darkThemeColor);
+
+    const elementsToReveal = [
+      ".header-container", 
+      ".main-container", 
+      ".social-media-container", 
+      "footer"
+    ];
+
+    elementsToReveal.forEach(selector => {
+      const el = document.querySelector(selector);
+      if (el) el.classList.add("content-loaded");
+    });
+  } catch (err) {
+    console.error("Error loading content:", err);
+  }
 });

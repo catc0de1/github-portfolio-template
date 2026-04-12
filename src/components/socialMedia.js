@@ -4,7 +4,7 @@ export function renderSocialMedia(list = []) {
   if (!Array.isArray(list) || list.length === 0) return;
 
   const container = document.createElement("div");
-  container.className = "social-media-fixed";
+  container.className = "social-media-container";
 
   const toggle = document.createElement("button");
   toggle.className = "social-media-toggle";

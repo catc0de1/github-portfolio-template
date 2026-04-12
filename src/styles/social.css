@@ -1,5 +1,5 @@
 /* Social Media Sidebar */
-.social-media-fixed {
+.social-media-container {
   position: fixed;
   top: 50%;
   left: 20px;
@@ -73,7 +73,7 @@
     display: flex;
   }
 
-  .social-media-fixed {
+  .social-media-container {
     top: 15px;
     left: 20px;
     max-height: 45px;
@@ -87,7 +87,7 @@
     transition: all 0.3s ease;
   }
 
-  .social-media-fixed.expanded {
+  .social-media-container.expanded {
     padding-top: 70px;
     max-height: 500px;
   }
@@ -99,7 +99,7 @@
     transition: all 0.25s ease;
   }
 
-  .social-media-fixed.expanded .social-media-wrapper {
+  .social-media-container.expanded .social-media-wrapper {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;

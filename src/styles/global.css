@@ -56,6 +56,21 @@ a:hover {
   text-decoration: underline;
 }
 
+.main-container,
+.header-container,
+.social-media-container,
+footer
+{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.content-loaded {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;

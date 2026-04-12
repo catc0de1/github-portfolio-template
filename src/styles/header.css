@@ -41,15 +41,15 @@
   width: 11em;
   display: flex;
   flex-direction: row;
-  items-align: center;
+  align-items: center;
 }
 
 #githubLink a {
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: row;
-  justify-align: center;
-  items-align: centeer;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   background-color: #181717;
   color: white;
