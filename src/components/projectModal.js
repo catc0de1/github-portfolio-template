@@ -32,8 +32,19 @@ export function projectModal(project) {
   }
 
   modalTitle.textContent = project.name;
-  modalDescription.textContent =
-    project.fullDescription || project.description || "No description available";
+  const fullDesc = project.fullDescription || project.description || "No description available";
+  
+  if (Array.isArray(fullDesc)) {
+    let htmlContent = `<ul>`;
+    for (let i = 0; i < fullDesc.length; i++) {
+      htmlContent += `<li>${fullDesc[i]}</li>`;
+    }
+    htmlContent += `</ul>`;
+    modalDescription.innerHTML = htmlContent;
+  } else {
+    modalDescription.textContent = fullDesc;
+    modalDescription.style.whiteSpace = "pre-line";
+  }
 
   const techStacks = Array.isArray(project.techStack)
     ? project.techStack.map((t) => {
@@ -98,6 +109,8 @@ export function projectModal(project) {
 
   const scrollProgress = modal.querySelector(".modal-scroll-progress");
 
+  if (scrollProgress) scrollProgress.style.width = "0%";
+
   scrollContainer.addEventListener("scroll", () => {
     const scrollTop = scrollContainer.scrollTop;
     const scrollHeight = scrollContainer.scrollHeight - scrollContainer.clientHeight;
@@ -105,9 +118,23 @@ export function projectModal(project) {
     scrollProgress.style.width = `${scrolled}%`;
   });
 
+  const handleEsc = (e) => {
+    if (e.key === "Escape") {
+      const viewer = document.getElementById("image-viewer");
+
+      if(viewer && viewer.style.display === "flex") {
+        viewer.style.display = "none";
+      } else {
+        closeModal();
+      }
+    }
+  };
+
   function closeModal() {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
+
+    window.removeEventListener("keydown", handleEsc);
 
     modal.onclick = null;
 
@@ -120,6 +147,8 @@ export function projectModal(project) {
     }
   }
 
+  window.addEventListener("keydown", handleEsc);
+
   const closeButton = modal.querySelector("#modal-close");
   if (closeButton) {
     closeButton.onclick = (e) => {
@@ -127,10 +156,6 @@ export function projectModal(project) {
       closeModal();
     };
   }
-
-  modal.onclick = (e) => {
-    if (e.target === modal) closeModal();
-  };
 
   modal.onclick = (e) => {
     if (e.target === modal) {

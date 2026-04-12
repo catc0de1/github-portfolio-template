@@ -2,9 +2,8 @@
   {
     "name": "Portfolio Website",
     "description": "My personal portfolio as Informatic Engineering",
-    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
+    "fullDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo, natus quo placeat tempora, cumque in incidunt debitis vel consequatur amet molestias veritatis quia quisquam praesentium, velit harum dignissimos! Numquam?",
     "projectUrl": "https://github.com/catc0de1/example",
-    "productUrl": "https://example.com",
     "field": "Website",
     "status": "COMPLETED",
     "techStack": [
@@ -29,8 +28,7 @@
   {
     "name": "Discord",
     "description": "Directory Listing App, show all best point in Surabaya",
-    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
-    "projectUrl": "https://github.com/catc0de1/example",
+    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam! \n \n - Lorem ipsum dolor \n - Lorem ipsum \n - Lorem ipsum dolor sit amet",
     "productUrl": "https://example.com",
     "field": "Cross Platform App",
     "status": "COMPLETED",
@@ -61,9 +59,16 @@
   {
     "name": "Email API Server",
     "description": "Prortype of SMTP Email API Server",
-    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
-    "projectUrl": "https://github.com/catc0de1/example",
-    "productUrl": "https://example.com",
+    "fullDescription": [
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus enim molestiae assumenda laborum! Amet saepe quidem maiores asperiores nihil quae?",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aliquid.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis suscipit, praesentium quae voluptatem illo molestias?",
+      "Lorem ipsum dolor sit amet.",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid, fuga!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, eum?",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde alias repudiandae quia.",
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, ipsa."
+    ],
     "field": "Website",
     "status": "COMPLETED",
     "techStack": [
@@ -86,6 +91,11 @@
       { "name": "js" },
       { "name": "github" }
     ],
-    "thumbnailImage": "gp7.png"
+    "thumbnailImage": "gp7.png",
+    "modalImages": [
+      {
+        "fileName": "gp7.png"
+      }
+    ]
   }
 ]
