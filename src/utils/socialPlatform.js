@@ -1,5 +1,5 @@
 // social media name, color, icon
-export const socialBrand = {
+export const socialPlatform = {
   "ig": {
     name: "instagram",
     color: "linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)",

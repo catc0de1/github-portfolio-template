@@ -1,7 +1,7 @@
 import fs from "fs";
 import { colors } from "../configs/colors.js";
 import { logSuccess, logError, logResult, logErrorRequired, logErrorUrlFormat, logValid, logErrorString, logUseDefault, logErrorColorFormat, logErrorBoolean, logErrorEmailFormat, logErrorWhiteSpace, logErrorEnum, logErrorArrayContainString, logErrorArrayString, logInfo, logWarningEmpty } from "../configs/log.js";
-import { socialBrand } from "../src/utils/socialBrand.js";
+import { socialPlatform } from "../src/utils/socialPlatform.js";
 import { techBrand } from "../src/utils/techBrand.js";
 import { projectStatus } from "../src/utils/statusEnum.js";
 import { defaultImage } from "../src/utils/defaultImage.js";
@@ -55,8 +55,7 @@ function validateConfig(config) {
   // webTitle
   if (config.webTitle) {
     if (typeof config.webTitle !== "string") {
-      logErrorString("webTitle");
-      valid = false;
+      logWarningEmpty("webTitle");
     } else if (config.webTitle.trim() === "") {
       logErrorWhiteSpace("webTitle");
       valid = false;
@@ -65,18 +64,28 @@ function validateConfig(config) {
     }
   }
 
-  // title, subtitle
-  ["title", "subtitle"].forEach(field => {
-    if (!config[field] || config[field].trim() === "") {
-      logErrorRequired(field);
-      valid = false;
-    } else if (typeof config[field] !== "string") {
-      logErrorString(field);
-      valid = false;
-    } else {
-      logValid(field);
-    }
-  });
+  // title
+  if (!config.title) {
+    logWarningEmpty("title");
+  } else if (config.title.trim() === "") {
+    logErrorWhiteSpace("title");
+    valid = false;
+  } else if (typeof config.title !== "string") {
+    logErrorString("title");
+    valid = false;
+  } else {
+    logValid("title");
+  }
+
+  // subtitle
+  if (!config.subtitle) {
+    logWarningEmpty("subtitle");
+  } else if (typeof config.subtitle !== "string") {
+    logErrorString("subtitle");
+    valid = false;
+  } else {
+    logValid("subtitle");
+  }
 
   // lightThemeColor, darkThemeColor
   ["lightThemeColor", "darkThemeColor"].forEach(field => {
@@ -126,7 +135,7 @@ function validateConfig(config) {
       logResult("error", "socialMedia must be an array");
       valid = false;
     } else {
-      const brandName = Object.keys(socialBrand);
+      const brandName = Object.keys(socialPlatform);
       config.socialMedia.forEach((social, idx) => {
         // socialMedia.name
         if (!social.name) {

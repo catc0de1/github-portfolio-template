@@ -2,11 +2,11 @@
   {
     "repoName": "My Other Repo",
     "repoDesc": "This is my other repo. The content is specialized field",
-    "repoUrl": "https://github.com/yourname/my-other-repo"
+    "repoUrl": "https://github.com/reponame"
   },
   {
     "repoName": "Organization Repo Example",
     "repoDesc": "This repo is from an organization.",
-    "repoUrl": "https://github.com/yourorg/repo-example"
+    "repoUrl": "https://github.com/yourorg/reponame"
   }
 ]

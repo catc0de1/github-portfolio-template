@@ -1,4 +1,4 @@
-import { socialBrand } from "../utils/socialBrand.js";
+import { socialPlatform } from "../utils/socialPlatform.js";
 
 export function renderSocialMedia(list = []) {
   if (!Array.isArray(list) || list.length === 0) return;
@@ -27,7 +27,7 @@ export function renderSocialMedia(list = []) {
   list.forEach((item) => {
     if (!item.url || !item.name) return;
 
-    const brand = socialBrand[item.name.toLowerCase()];
+    const brand = socialPlatform[item.name.toLowerCase()];
 
     if (!brand) return;
 

@@ -45,7 +45,7 @@ export function logErrorEnum(field, enumsValue) {
   logResult("error", `Field "${colors.bright}${field}${colors.reset}" is invalid value. See allowed ${enumsValue}`);
 }
 export function logErrorWhiteSpace(field) {
-  logResult("error", `Field "${colors.bright}${field}${colors.reset}" cannot contain white spcae only`);
+  logResult("error", `Field "${colors.bright}${field}${colors.reset}" cannot contain white space only`);
 }
 export function logErrorString(field) {
   logResult("error", `Field "${colors.bright}${field}${colors.reset}" must be a string`);
@@ -60,7 +60,7 @@ export function logErrorUrlFormat(field) {
   logResult("error", `Field "${colors.bright}${field}${colors.reset}" must be an URL format`);
 }
 export function logErrorColorFormat(field) {
-  logResult("error", `Field "${colors.bright}${field}${colors.reset}" must be a #RRGGBB color format`);
+  logResult("error", `Field "${colors.bright}${field}${colors.reset}" must be a hex color format`);
 }
 export function logErrorEmailFormat(field) {
   logResult("error", `Field "${colors.bright}${field}${colors.reset}" must be an email format`);
