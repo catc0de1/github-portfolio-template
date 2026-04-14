@@ -46,7 +46,8 @@
     "thumbnailImageAlt": "Official Discord App Logo",
     "modalImages": [
       {
-        "fileName": "discord1.jpeg"
+        "fileName": "discord1.jpeg",
+        "alt": "Discord logo"
       },
       { 
         "fileName": "discord2.jpeg"
@@ -80,7 +81,6 @@
   {
     "name": "GitHub Portfolio Template",
     "description": "Open Source GitHub portfolio template, ready to use and no need coding",
-    "fullDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus enim minima nulla, quo voluptatibus repellat maxime dolor culpa expedita quam!",
     "projectUrl": "https://github.com/catc0de1/github-portfolio-api-template",
     "productUrl": "https://example.com",
     "field": "Open Source Template",

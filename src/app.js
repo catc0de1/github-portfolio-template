@@ -18,13 +18,17 @@ async function loadConfig() {
 
 async function loadProjects(config) {
   const container = document.getElementById("projects");
-  if (config.useLocalJson && config.useLocalJson === true) {
+  const useLocalJson = config.useLocalJson || true;
+
+  if (useLocalJson && useLocalJson == true) {
     try {
       const res = await fetch("./data/projects.json");
       if (!res.ok) throw new Error("Failed to load project data");
       const projects = await res.json();
       
       projects.forEach((project) => {
+        if (!project.name) return;
+
         const card = projectCard(project);
         container.appendChild(card);
       });
@@ -45,12 +49,12 @@ async function loadSubRepos() {
   };
 
   try {
-    const res = await fetch("./data/repos.json");
+    const res = await fetch("./data/repositories.json");
     if (res.status === 404) {
       hideSection();
       console.warn(
-        "No repos.json found, skipping sub repos section.",
-        "If you want to silent this log, create a repos.json file in the data folder then fill `[]`."
+        "No repositories.json found, skipping sub repositories section.",
+        "If you want to silent this log, create a repositories.json file in the data folder then fill `[]`."
       );
       return
     };
@@ -62,19 +66,21 @@ async function loadSubRepos() {
       return;
     }
 
-    const subRepos = JSON.parse(data);
+    const reporitories = JSON.parse(data);
 
-    if (!Array.isArray(subRepos) || subRepos.length === 0) {
+    if (!Array.isArray(reporitories) || reporitories.length === 0) {
       hideSection();
       return;
     }
 
-    subRepos.forEach((item) => {
-      const card = subRepoCard(item);
+    reporitories.forEach((repository) => {
+      if (!repository.repoName) return;
+
+      const card = subRepoCard(repository);
       container.appendChild(card);
     });
   } catch (err) {
-    console.error("Error loading sub-repos:", err);
+    console.error("Error loading sub-repositories:", err);
     hideSection();
   }
 }
@@ -82,20 +88,35 @@ async function loadSubRepos() {
 function applyConfigToUI(config) {
   if (config.webTitle && typeof config.webTitle === "string") {
     document.title = config.webTitle;
+  } else if (config.githubUsername && typeof config.githubUsername === "string") {
+    document.title = `GitHub Portfolio - ${config.githubUsername}`;
   } else {
     document.title = "GitHub Portfolio";
   }
 
-  document.querySelector("h1").textContent = config.title;
+  document.querySelector("h1").textContent = config.title || `Hi, I'm ${config.githubUsername}`;
 
-  document.querySelector(".subtitle").textContent = config.subtitle;
+  document.querySelector(".subtitle").textContent = config.subtitle || "";
 
-  document.querySelector("footer a").href = config.githubUrl;
+  document.querySelector("footer a").href = config.githubUrl || `https://github.com/${config.githubUsername}`;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
   const config = await loadConfig();
-  if (!config) return;
+
+  if (!config || !config.githubUsername || config.githubUsername.trim() === "") {
+    console.error("Critical Error: githubUsername is missing in config.json. Rendering aborted.");
+    
+    document.title = "Configuration Error";
+
+    document.body.innerHTML = `
+      <div style="display:flex; justify-content:center; align-items:center; text-align:center; flex-direction:column; color:#ff4d4d;">
+        <h1>Critical Configuration Error</h1>
+        <p>Field "githubUsername" is required in data/config.json</p>
+      </div>
+    `;
+    return;
+  }
 
   applyConfigToUI(config);
     renderSocialMedia(config.socialMedia);

@@ -4,34 +4,30 @@
   "webTitle": "GitHub Portfolio - catc0de1",
   "title": "Hi, I'm catc0de1",
   "subtitle": "I'm an Informatic Engineer As Fullstack Software Developer",
-  "lightThemeColor": "#0000FF",
-  "darkThemeColor": "#BB86FC",
-  "useLocalJson": true,
-  "email": "youremail@example.com",
   "socialMedia": [
     {
       "name": "ig",
-      "url": "your_ig"
+      "url": "https://your_ig"
     },
     {
       "name": "linkedin",
-      "url": "your_in"
+      "url": "https://your_in"
     },
     {
       "name": "dc",
-      "url": "your_dc"
+      "url": "https://your_dc"
     },
     {
       "name": "fb",
-      "url": "your_fb"
+      "url": "https://your_fb"
     },
     {
       "name": "x",
-      "url": "your_x"
+      "url": "https://your_x"
     },
     {
       "name": "wa",
-      "url": "your_wa"
+      "url": "https://your_wa"
     }
   ]
 }

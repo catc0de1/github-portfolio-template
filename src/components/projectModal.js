@@ -32,7 +32,7 @@ export function projectModal(project) {
   }
 
   modalTitle.textContent = project.name;
-  const fullDesc = project.fullDescription || project.description || "No description available";
+  const fullDesc = project.fullDescription || project.description;
   
   if (Array.isArray(fullDesc)) {
     let htmlContent = `<ul>`;
@@ -74,12 +74,12 @@ export function projectModal(project) {
 
   const modalProjectField = modal.querySelector("#modal-project-field");
   if (modalProjectField) {
-    modalProjectField.textContent = project.field || '';
+    modalProjectField.textContent = project.field || 'Unknown';
   }
 
   const modalProjectStatus = modal.querySelector("#modal-project-status");
   if (modalProjectStatus) {
-    modalProjectStatus.textContent = project.status || '';
+    modalProjectStatus.textContent = project.status || 'UNKNOWN';
   }
 
   const modalFooter = modal.querySelector(".modal-footer");

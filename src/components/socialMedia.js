@@ -29,6 +29,8 @@ export function renderSocialMedia(list = []) {
 
     const brand = socialBrand[item.name.toLowerCase()];
 
+    if (!brand) return;
+
     const wrapper = document.createElement("div");
     wrapper.className = "social-media-wrapper";
 
@@ -37,14 +39,9 @@ export function renderSocialMedia(list = []) {
     link.target = "_blank";
     link.rel = "noopener";
     link.className = "social-media-item";
-
-    if (brand) {
-      link.innerHTML = brand.svg;
-      link.style.background = brand.color;
-      link.title = brand.name;
-    } else {
-      link.textContent = item.name;
-    }
+    link.innerHTML = brand.svg;
+    link.style.background = brand.color;
+    link.title = brand.name;
 
     link.addEventListener("click", () => {
       container.classList.remove("expanded");

@@ -18,7 +18,7 @@ export function projectCard(project) {
     ? project.techStack.map((t) => {
       const tech = techBrand[t.name];
       if (!tech) {
-        return `<span class="project-tech-item unknown">${t.name}</span>`;
+        // return `<span class="project-tech-item unknown">${t.name}</span>`;
       }
       return `
         <span class="project-tech-item" title="${tech.name}">
@@ -26,7 +26,7 @@ export function projectCard(project) {
         </span>
       `;
     }).join("")
-    : `<span>Unknown</span>`;
+    : `<span></span>`;
 
   card.innerHTML = `
     <div class="project-image-container">
