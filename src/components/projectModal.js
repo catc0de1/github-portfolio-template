@@ -50,7 +50,7 @@ export function projectModal(project) {
     ? project.techStack.map((t) => {
       const tech = techBrand[t.name];
       if (!tech) {
-        return `<span class="project-tech-item unknown">${t.name}</span>`;
+        return `<span style="display: none;">Unknown ${t.name}</span>`;
       }
       return `
         <a
