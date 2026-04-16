@@ -3,11 +3,11 @@
     "name": "Portfolio Website",
     "description": "My personal portfolio as Informatic Engineering",
     "fullDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi explicabo, natus quo placeat tempora, cumque in incidunt debitis vel consequatur amet molestias veritatis quia quisquam praesentium, velit harum dignissimos! Numquam?",
-    "projectUrl": "https://github.com/catc0de1/example",
+    "projectUrl": "https://github.com/iyanarmanda/example",
     "field": "Website",
     "status": "COMPLETED",
     "techStack": [
-      { "name": "react" },
+      { "name": "reacts" },
       { "name": "tailwind" },
       { "name": "vite" },
       { "name": "ts" }
@@ -81,7 +81,7 @@
   {
     "name": "GitHub Portfolio Template",
     "description": "Open Source GitHub portfolio template, ready to use and no need coding",
-    "projectUrl": "https://github.com/catc0de1/github-portfolio-api-template",
+    "projectUrl": "https://github.com/iyanarmanda/github-portfolio-api-template",
     "productUrl": "https://example.com",
     "field": "Open Source Template",
     "status": "ON PROGRESS",
